@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ContentForge | SEO Content Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+  <div class="background-grid"></div>
+
+  <main class="app-shell">
+
+    <nav class="topbar">
+      <div class="brand">
+        <div class="brand-icon">✦</div>
+        <div>
+          <span>ContentForge</span>
+          <small>SEO Content Generator</small>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <span class="status-dot"></span>
+        <span>Beta Preview</span>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-pill">
+        ✨ E-ticaret, sosyal medya ve SEO için akıllı içerik üretimi
+      </div>
+
+      <h1>
+        Ürün açıklaması, <span>hashtag</span> ve keyword üretimini tek ekranda yap.
+      </h1>
+
+      <p>
+        Ürün adını, sektörünü ve özelliklerini gir; sistem farklı kombinasyonlarda
+        açıklama, hashtag ve anahtar kelime listesi oluştursun.
+      </p>
+    </section>
+
+    <section class="generator-card">
+
+      <div class="input-column">
+        <button class="mobile-accordion-btn" id="toggleInputs">
+          ⚙️ İçerik Ayarları
+        </button>
+
+        <div id="inputsWrapper">
+
+          <div class="section-title">
+            <span>01</span>
+            <div>
+              <h2>İçerik Bilgileri</h2>
+              <p>Ürün ve sektör detaylarını gir.</p>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="productName">Ürün Adı *</label>
+            <div class="input-box">
+              <span>📦</span>
+              <input id="productName" type="text" placeholder="Pasta Dolabı" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="sector">Sektör *</label>
+            <div class="input-box">
+              <span>🏷️</span>
+              <input id="sector" type="text" placeholder="Endüstriyel Mutfak" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="features">Ürün Özellikleri</label>
+            <div class="textarea-box">
+              <textarea id="features" placeholder="LED aydınlatma, paslanmaz gövde, kavisli cam"></textarea>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <div class="control-head">
+              <h3>Ton Seçimi</h3>
+              <small>İçeriğin dilini belirle.</small>
+            </div>
+
+            <div class="tone-grid">
+              <button class="choice-card active" data-tone="premium">
+                <strong>✨ Premium</strong>
+                <span>Şık ve prestijli</span>
+              </button>
+
+              <button class="choice-card" data-tone="kurumsal">
+                <strong>🏢 Kurumsal</strong>
+                <span>Güven veren metin</span>
+              </button>
+
+              <button class="choice-card" data-tone="seo">
+                <strong>📈 SEO</strong>
+                <span>Arama odaklı</span>
+              </button>
+
+              <button class="choice-card" data-tone="satis">
+                <strong>🚀 Satış</strong>
+                <span>Dönüşüm odaklı</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <div class="control-head">
+              <h3>Açıklama Uzunluğu</h3>
+              <small>2 farklı açıklama üretilir.</small>
+            </div>
+
+            <div class="length-switch">
+              <button class="length-btn active" data-length="kisa">Kısa</button>
+              <button class="length-btn" data-length="orta">Orta</button>
+              <button class="length-btn" data-length="uzun">Uzun</button>
+            </div>
+          </div>
+
+          <div class="mini-settings">
+            <div class="mini-select">
+              <label for="hashtagCount">Hashtag Sayısı</label>
+              <select id="hashtagCount">
+                <option value="5">5 adet</option>
+                <option value="10">10 adet</option>
+                <option value="15">15 adet</option>
+              </select>
+            </div>
+
+            <div class="mini-select">
+              <label for="keywordCount">Keyword Sayısı</label>
+              <select id="keywordCount">
+                <option value="5">5 adet</option>
+                <option value="10">10 adet</option>
+                <option value="15">15 adet</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="generateBtn" class="generate-btn">
+            <span>✨ İçerik Üret</span>
+            <small>Duplicate olmadan yeni kombinasyon oluştur</small>
+          </button>
+
+        </div>
+      </div>
+
+      <div class="output-column">
+        <button class="mobile-accordion-btn" id="toggleResults">
+          📄 Sonuçlar
+        </button>
+
+        <div id="resultsWrapper">
+
+          <div class="section-title">
+            <span>02</span>
+            <div>
+              <h2>Oluşturulan İçerikler</h2>
+              <p>Kopyala, yenile ve direkt kullan.</p>
+            </div>
+          </div>
+
+          <div class="output-stack">
+
+            <article class="output-card featured">
+              <div class="output-card-head">
+                <div>
+                  <span class="eyebrow">Açıklama 1</span>
+                  <h3>Birinci varyasyon</h3>
+                </div>
+                <div class="card-actions">
+                  <button class="refresh-btn" data-refresh="descriptionOne">↻</button>
+                  <button class="copy-btn" data-copy="descriptionOne">Kopyala</button>
+                </div>
+              </div>
+              <p id="descriptionOne">
+                Henüz içerik oluşturulmadı. Ürün bilgilerini girip “İçerik Üret” butonuna bas.
+              </p>
+            </article>
+
+            <article class="output-card">
+              <div class="output-card-head">
+                <div>
+                  <span class="eyebrow">Açıklama 2</span>
+                  <h3>Alternatif metin</h3>
+                </div>
+                <div class="card-actions">
+                  <button class="refresh-btn" data-refresh="descriptionTwo">↻</button>
+                  <button class="copy-btn" data-copy="descriptionTwo">Kopyala</button>
+                </div>
+              </div>
+              <p id="descriptionTwo">
+                İkinci açıklama burada görünecek.
+              </p>
+            </article>
+
+            <article class="output-card">
+              <div class="output-card-head">
+                <div>
+                  <span class="eyebrow">Hashtag</span>
+                  <h3>Sosyal medya etiketleri</h3>
+                </div>
+                <div class="card-actions">
+                  <button class="refresh-btn" data-refresh="hashtagResult">↻</button>
+                  <button class="copy-btn" data-copy="hashtagResult">Kopyala</button>
+                </div>
+              </div>
+              <p id="hashtagResult" class="tag-output">
+                #hashtag #seo #content
+              </p>
+            </article>
+
+            <article class="output-card">
+              <div class="output-card-head">
+                <div>
+                  <span class="eyebrow">Keywords</span>
+                  <h3>SEO anahtar kelimeleri</h3>
+                </div>
+                <div class="card-actions">
+                  <button class="refresh-btn" data-refresh="keywordResult">↻</button>
+                  <button class="copy-btn" data-copy="keywordResult">Kopyala</button>
+                </div>
+              </div>
+              <p id="keywordResult">
+                ürün açıklaması, seo içerik, hashtag üretici
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="toast" class="toast">✓ Panoya kopyalandı</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
