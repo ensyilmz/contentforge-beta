@@ -1,4 +1,4 @@
-# 🚀 ContentForge Beta
+# ContentForge Beta v0.1
 
 Modern SEO Content Generator
 
